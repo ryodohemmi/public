@@ -1,4 +1,4 @@
-Whenever you use any resources of this repository for academic purpose (e.g., academic paper, proceedings, book),  
+Whenever you use any resources of this repository for academic purposes (e.g., academic paper, proceedings, book),  
 please cite like below (following the citation style of the journal to which you are going to submit a paper):
 ```
 Hemmi, R., and H. Miyamoto (2017), Distribution, morphology, and morphometry of circular mounds in the elongated basin of northern Terra Sirenum, Mars, Progress in Earth and Planetary Science, 4(1), 26. https://doi.org/10.1186/s40645-017-0141-x
