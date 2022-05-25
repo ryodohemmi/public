@@ -7,3 +7,4 @@ please cite like below (following the citation style of the journal to which you
 ```
 Hemmi, R., and H. Miyamoto (2018), High-resolution topographic analyses of mounds in southern Acidalia Planitia, Mars: Implications for possible mud volcanism in submarine and subaerial environments, Geosciences, 8(5), 152. https://doi.org/10.3390/geosciences8050152
 ```
+https://doi.org/10.3390/geosciences8050152
