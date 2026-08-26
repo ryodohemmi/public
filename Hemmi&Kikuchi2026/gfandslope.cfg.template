@@ -1,0 +1,6 @@
+period: 0.0
+density: 1862.297786
+input_polygon: work/v004_${scale}.obj.txt
+input_points: NONE
+output: work/v004_${scale}_surface.txt
+gpu: 0
