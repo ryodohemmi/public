@@ -1,0 +1,67 @@
+{
+  "analysis": "Phobos v004 gravity-referenced slope scale analysis",
+  "native_scale_m": 18.0,
+  "native_is_unsmoothed": true,
+  "scales_m": [
+    18.0,
+    80.0,
+    100.0,
+    125.0,
+    150.0,
+    175.0,
+    200.0,
+    250.0,
+    500.0,
+    1000.0,
+    2000.0
+  ],
+  "grid_sizes_W_deg": [
+    1.0,
+    2.0,
+    4.0,
+    6.0,
+    10.0
+  ],
+  "feature_count": 12582912,
+  "facet_id_base": 1,
+  "regional_weighting": "current",
+  "vector_weighting": "native",
+  "fixed_support": {
+    "grid": "For each W, latitude-longitude cell membership is assigned from native-model facet centroids and reused for every L. Grid edges are anchored at -90 deg latitude and -180 deg longitude. If W does not divide 180/360 exactly, the final edge band is narrower and its actual bounds are written to the CSV.",
+    "regions": {
+      "Leading": "lat [-1,1], lon [-91,-89] deg",
+      "Sub-Mars": "lat [-1,1], lon [-1,1] deg",
+      "Trailing": "lat [-1,1], lon [89,91] deg",
+      "Anti-Mars": "lat [-1,1], lon [179,180) union [-180,-179] deg"
+    }
+  },
+  "histogram_settings": {
+    "global_output_bin_width_deg": 0.5,
+    "roi_output_bin_width_deg": 0.5,
+    "fine_quantile_bin_width_deg": 0.001,
+    "grid_p95_bin_width_deg": 0.1,
+    "gravity_mag_bin_width_pct": 0.001
+  },
+  "grid_window_summary": "Area-weighted quantiles across nonempty grid cells, summarizing how the gridded statistics depend on the sampling-window width W (reported in Table 3 and Figure 8a of the manuscript).",
+  "gpkg_files": {
+    "18": "v004gpkg/v004_18_surface_TA00.gpkg",
+    "80": "v004gpkg/v004_80_surface_TA00.gpkg",
+    "100": "v004gpkg/v004_100_surface_TA00.gpkg",
+    "125": "v004gpkg/v004_125_surface_TA00.gpkg",
+    "150": "v004gpkg/v004_150_surface_TA00.gpkg",
+    "175": "v004gpkg/v004_175_surface_TA00.gpkg",
+    "200": "v004gpkg/v004_200_surface_TA00.gpkg",
+    "250": "v004gpkg/v004_250_surface_TA00.gpkg",
+    "500": "v004gpkg/v004_500_surface_TA00.gpkg",
+    "1000": "v004gpkg/v004_1000_surface_TA00.gpkg",
+    "2000": "v004gpkg/v004_2000_surface_TA00.gpkg"
+  },
+  "native_obj": "phobos_g_018m_spc_obj_0000n00000_v004.obj",
+  "smoothed_obj_pattern": "phobos_g_018m_spc_obj_0000n00000_v004_diffuse_efold_{L}_preserve.obj",
+  "notes": [
+    "GPKG geometry/point spacing is not used for cross-scale matching.",
+    "Facet matching uses contiguous facet_id and preserved OBJ face order.",
+    "Each requested W is an explicit fixed spatial-support scale.",
+    "Gridded statistics are conditional on the adopted window width W; L (e-fold smoothing wavelength) and W are independent analysis parameters."
+  ]
+}

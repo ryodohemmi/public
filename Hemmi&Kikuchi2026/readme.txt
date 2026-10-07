@@ -151,7 +151,8 @@ grid_scale_response.csv
     Fixed-grid slope and azimuth statistics used in the global mapping analysis.
 
 grid_window_summary.csv
-    Sampling-window sensitivity results for W = 1, 2, 4, 6, and 10 degrees.
+    Sampling-window sensitivity results for W = 1, 2, 4, 6, and 10 degrees;
+    values reported in Table 3 and plotted in Figure 8a.
 
 vector_response_summary.csv
     Surface-normal and effective-gravity vector-response statistics used in
@@ -228,6 +229,13 @@ epoch. At the nominal epoch,
 
 |omega_dot| approximately 1.0386e-11 rad/s^2.
 
+This epoch lies near the orbital minimum of the angular acceleration. Evaluated with the
+same IAU_PHOBOS rotation model, the maximum of |omega_dot| over the orbit is approximately
+1.04e-9 rad/s^2, about two orders of magnitude larger. Even then, the Euler acceleration at
+r = 11 km is about 1e-5 m/s^2, of order 0.2% of a representative surface effective-gravity
+magnitude, so the Euler term remains negligible at any orbital phase (see Section 2.2 of the
+manuscript).
+
 Calculation metadata are retained in the commented headers of the generated CSV
 files.
 
@@ -246,7 +254,10 @@ requirements_NoSpin_result_TA000.txt
 input/ (empty)
 script/make_NoSpin_result_TA000.py (run with --alpha-dt 1.0 by default)
 script/run_make_NoSpin_result_TA000.sh
-spice/ (the SPICE kernels required by the wrapper)
+spice/ (the NAIF generic SPICE kernels required by the wrapper:
+       lsk/naif0012.tls, pck/pck00011.tpc, pck/gm_de440.tpc, spk/mar099s.bsp;
+       no separate frame kernel is needed, because IAU_PHOBOS is a built-in
+       SPICE frame defined through pck00011.tpc)
 
 Note: Some intermediate filenames retain the legacy string "NoSpin". These names are
       preserved for provenance. The final products used in the manuscript include
@@ -359,6 +370,14 @@ Supplementary Files for "Scale-dependent gravity-referenced slopes on Phobos
 using diffusion-smoothed shape models with recomputed effective gravity."
 Zenodo.
 https://doi.org/10.5281/zenodo.22067338
+
+
+LLM USE
+-------
+The authors used ChatGPT (OpenAI) and Claude (Anthropic) for English-language editing and
+wording refinement of the associated manuscript, and for assistance in writing and debugging
+analysis code. All suggested changes and code were independently evaluated and tested by the
+authors, who take full responsibility for the archived scripts and data products.
 
 
 LICENSE
