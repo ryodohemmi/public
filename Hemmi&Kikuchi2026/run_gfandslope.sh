@@ -11,7 +11,7 @@ set -euo pipefail
 #   GFandSlope period: 0.0 h
 #
 # The final effective-gravity products used in the paper are NOT produced by
-# GFandSlope alone. Centrifugal and Martian tidal accelerations are added later
+# GFandSlope alone. Centrifugal, Euler, and Martian tidal accelerations are added later
 # by the separate gravity wrapper distributed with the reproduction package.
 #
 # Usage:
@@ -129,6 +129,6 @@ done
 
 echo
 echo "GFandSlope self-gravity calculations completed successfully."
-echo "Next step: run the separate gravity wrapper to add centrifugal"
-echo "and Martian tidal accelerations and to calculate final"
+echo "Next step: run the separate gravity wrapper to add centrifugal,"
+echo "Euler, and Martian tidal accelerations and to calculate final"
 echo "effective-gravity slope and downslope azimuth products."

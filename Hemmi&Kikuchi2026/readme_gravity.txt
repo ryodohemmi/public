@@ -61,6 +61,13 @@ finite difference of the SPICE-derived angular velocity evaluated 1 s before
 and 1 s after the nominal epoch. The wrapper also added the Martian tidal
 acceleration.
 
+This epoch lies near the orbital minimum of the angular acceleration. Evaluated with the
+same IAU_PHOBOS rotation model, the maximum of |omega_dot| over the orbit is approximately
+1.04e-9 rad/s^2, about two orders of magnitude larger. Even then, the Euler acceleration at
+r = 11 km is about 1e-5 m/s^2, of order 0.2% of a representative surface effective-gravity
+magnitude, so the Euler term remains negligible at any orbital phase (see Section 2.2 of the
+manuscript).
+
 Therefore, the final effective-gravity, gravity-referenced slope, and
 downslope-azimuth products include rotation despite the period: 0.0 setting in
 the GFandSlope configuration.
