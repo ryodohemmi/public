@@ -254,14 +254,23 @@ requirements_NoSpin_result_TA000.txt
 input/ (empty)
 script/make_NoSpin_result_TA000.py (run with --alpha-dt 1.0 by default)
 script/run_make_NoSpin_result_TA000.sh
-spice/ (the NAIF generic SPICE kernels required by the wrapper:
-       lsk/naif0012.tls, pck/pck00011.tpc, pck/gm_de440.tpc, spk/mar099s.bsp;
-       no separate frame kernel is needed, because IAU_PHOBOS is a built-in
-       SPICE frame defined through pck00011.tpc)
+spice/ (NAIF generic SPICE kernels used by the wrapper: lsk/naif0012.tls,
+       pck/pck00011.tpc, and pck/gm_de440.tpc are included; spk/ is empty,
+       see the note on mar099s.bsp below. No separate frame kernel is needed,
+       because IAU_PHOBOS is a built-in SPICE frame defined through
+       pck00011.tpc)
 
 Note: Some intermediate filenames retain the legacy string "NoSpin". These names are
       preserved for provenance. The final products used in the manuscript include
       centrifugal, Euler, and Martian tidal accelerations.
+
+The SPICE kernel mar099s.bsp is not bundled with this archive.
+Download it from:
+https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/mar099s.bsp
+Place it at NoSpin_result_TA000_scripts_package/spice/spk/mar099s.bsp
+before running the gravity calculations.
+SHA-256 of the kernel used in this study: 997dc93ba640e476da7a494d2237dcdeb145e528db37be8ccee588c615e4e1ff
+(file size: 67,594,240 bytes)
 
 
 COORDINATE AND WEIGHTING CONVENTIONS
@@ -357,7 +366,7 @@ shape models with recomputed effective gravity."
 The Planetary Science Journal.
 
 Article DOI:
-[ARTICLE DOI WHEN AVAILABLE]
+10.3847/PSJ/aeb4ac
 
 
 CITATION
