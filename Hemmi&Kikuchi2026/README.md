@@ -5,7 +5,7 @@ This repository does not take any responsibility and is not liable for any damag
 Whenever you use any resources of this repository for academic purposes (e.g., academic papers, proceedings, books),  
 please cite like below (following the citation style of the journal to which you are going to submit a paper):
 ```
-Hemmi, R., and H. Kikuchi (2026), Scale-dependent Gravity-referenced Slopes on Phobos Using Diffusion-smoothed Shape Models with Recomputed Effective Gravity, The Planetary Science Journal, accepted. DOI: 10.3847/PSJ/aeb4ac
+Hemmi, R., and H. Kikuchi (2026), Scale-dependent Gravity-referenced Slopes on Phobos Using Diffusion-smoothed Shape Models with Recomputed Effective Gravity, The Planetary Science Journal, 7(11), 255. DOI: 10.3847/PSJ/aeb4ac
 ```
 https://doi.org/10.3847/PSJ/aeb4ac  
 
